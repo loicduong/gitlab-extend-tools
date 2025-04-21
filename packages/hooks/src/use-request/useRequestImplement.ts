@@ -46,6 +46,7 @@ function useRequestImplement<
     params: fetchInstance.state.params || [],
     refresh: useMemoizedFn(fetchInstance.refresh.bind(fetchInstance)),
     refreshAsync: useMemoizedFn(fetchInstance.refreshAsync.bind(fetchInstance)),
+    response: fetchInstance.state.response,
     run: useMemoizedFn(fetchInstance.run.bind(fetchInstance)),
     runAsync: useMemoizedFn(fetchInstance.runAsync.bind(fetchInstance))
   } as Result<TData, TParams>;

@@ -1,5 +1,6 @@
 const route: App.I18n.Schema['translation']['route'] = {
   '(base)_about': '关于',
+  '(base)_file': 'Changed files',
   '(base)_function': '系统功能',
   '(base)_function_event-bus': '事件总线演示',
   '(base)_function_hide-child': '隐藏子菜单',

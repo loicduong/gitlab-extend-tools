@@ -9,7 +9,7 @@ import { localStg } from '@/utils/storage';
  *
  * @param lang
  */
-export function setDayjsLocale(lang: App.I18n.LangType = 'zh-CN') {
+export function setDayjsLocale(lang: App.I18n.LangType = 'en-US') {
   const localMap = {
     'en-US': 'en',
     'zh-CN': 'zh-cn'

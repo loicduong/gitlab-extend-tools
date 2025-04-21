@@ -6,6 +6,7 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const AAvatar: typeof import('antd')['Avatar']
   const AButton: typeof import('antd')['Button']
   const ACard: typeof import('antd')['Card']
   const ACheckbox: typeof import('antd')['Checkbox']
@@ -13,6 +14,7 @@ declare global {
   const ACollapse: typeof import('antd')['Collapse']
   const AColorPicker: typeof import('antd')['ColorPicker']
   const AConfigProvider: typeof import('antd')['ConfigProvider']
+  const ADatePicker: typeof import('antd')['DatePicker']
   const ADescriptions: typeof import('antd')['Descriptions']
   const ADivider: typeof import('antd')['Divider']
   const ADrawer: typeof import('antd')['Drawer']
@@ -35,6 +37,7 @@ declare global {
   const ASwitch: typeof import('antd')['Switch']
   const ATable: typeof import('antd')['Table']
   const ATag: typeof import('antd')['Tag']
+  const AText: typeof import('antd')['Text']
   const ATooltip: typeof import('antd')['Tooltip']
   const ATree: typeof import('antd')['Tree']
   const ATypography: typeof import('antd')['Typography']

@@ -160,6 +160,8 @@ export function createFlatRequest<ResponseData = any, State = Record<string, unk
     try {
       const response: AxiosResponse<ResponseData> = await instance(config);
 
+      console.log(response);
+
       const responseType = response.config?.responseType || 'json';
 
       if (responseType === 'json') {

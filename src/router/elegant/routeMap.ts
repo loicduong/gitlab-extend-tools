@@ -28,6 +28,7 @@ export const routeMap: RouteMap = {
  "document_procomponents": "/document/procomponents",
  "document_antd": "/document/antd",
  "(base)_about": "/about",
+ "(base)_file": "/file",
  "(base)_function": "/function",
  "(base)_function_event-bus": "/function/event-bus",
  "(base)_function_hide-child": "/function/hide-child",

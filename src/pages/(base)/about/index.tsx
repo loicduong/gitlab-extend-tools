@@ -103,4 +103,8 @@ const About = () => {
   );
 };
 
+export const handle = {
+  hideInMenu: true
+};
+
 export default About;

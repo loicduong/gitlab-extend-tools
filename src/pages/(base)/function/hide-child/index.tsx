@@ -8,4 +8,8 @@ export const loader = () => {
   return replace('one');
 };
 
+export const handle = {
+  hideInMenu: true
+};
+
 export default HideChild;

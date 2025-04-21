@@ -1,5 +1,6 @@
 const route: App.I18n.Schema['translation']['route'] = {
   '(base)_about': 'About',
+  '(base)_file': 'Changed files',
   '(base)_function': 'System Function',
   '(base)_function_event-bus': 'Event Bus Demo',
   '(base)_function_hide-child': 'Hide Child',

@@ -226,4 +226,17 @@ declare namespace Api {
       pId: number;
     };
   }
+
+  namespace Gitlab {
+    interface MR {
+      iid: number;
+      merge_user: {
+        avatar_url: string;
+        username: string;
+      };
+      merged_at: string;
+      title: string;
+      web_url: string;
+    }
+  }
 }

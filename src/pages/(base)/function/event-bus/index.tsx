@@ -111,4 +111,8 @@ const EventBusDemo = () => {
   );
 };
 
+export const handle = {
+  hideInMenu: true
+};
+
 export default EventBusDemo;

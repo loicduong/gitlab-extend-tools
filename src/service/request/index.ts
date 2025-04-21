@@ -1,7 +1,6 @@
-import { BACKEND_ERROR_CODE, createFlatRequest, createRequest } from '@sa/axios';
+import { createFlatRequest } from '@sa/axios';
 
 import { getServiceBaseURL } from '@/utils/service';
-import { localStg } from '@/utils/storage';
 
 import { backEndFail, handleError } from './error';
 import { getAuthorization } from './shared';
@@ -41,9 +40,12 @@ export const request = createFlatRequest<App.Service.Response, RequestInstanceSt
   }
 );
 
-export const demoRequest = createRequest<App.Service.DemoResponse>(
+export const demoRequest = createFlatRequest<App.Service.DemoResponse>(
   {
-    baseURL: otherBaseURL.demo
+    baseURL: otherBaseURL.demo,
+    headers: {
+      'Private-Token': ''
+    }
   },
   {
     isBackendSuccess(response) {
@@ -55,30 +57,31 @@ export const demoRequest = createRequest<App.Service.DemoResponse>(
       // when the backend response code is not "200", it means the request is fail
       // for example: the token is expired, refresh token and retry request
     },
-    onError(error) {
-      // when the request is fail, you can show error message
+    // onError(error) {
+    //   // when the request is fail, you can show error message
 
-      let message = error.message;
+    //   let message = error.message;
 
-      // show backend error message
-      if (error.code === BACKEND_ERROR_CODE) {
-        message = error.response?.data?.message || message;
-      }
+    //   // show backend error message
+    //   if (error.code === BACKEND_ERROR_CODE) {
+    //     message = error.response?.data?.message || message;
+    //   }
 
-      window.$message?.error(message);
-    },
-    async onRequest(config) {
-      const { headers } = config;
+    //   window.$message?.error(message);
+    // },
+    // async onRequest(config) {
+    //   const { headers } = config;
 
-      // set token
-      const token = localStg.get('token');
-      const Authorization = token ? `Bearer ${token}` : null;
-      Object.assign(headers, { Authorization });
+    //   // // set token
+    //   // const token = localStg.get('token');
+    //   // const Authorization = token ? `Bearer ${token}` : null;
+    //   // Object.assign(headers, { Authorization });
 
-      return config;
-    },
+    //   return config;
+    // },
     transformBackendResponse(response) {
-      return response.data.result;
+      console.log(response);
+      return response;
     }
   }
 );
