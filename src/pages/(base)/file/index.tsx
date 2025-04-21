@@ -160,7 +160,7 @@ const Component = () => {
                 {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
                 {/* @ts-ignore */}
                 <h1 className="text-lg font-bold">{item?.old_path}</h1>
-                <ASpace>
+                <ASpace wrap>
                   {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
                   {/* @ts-ignore */}
                   {item?.children?.map((child: any) => (
